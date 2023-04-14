@@ -16,9 +16,9 @@ function draw() {
     let y2 = y * spacing;
     let brightnessNoise = noise(y, t + 200);
     let brightness = map(brightnessNoise, 0, 1, 50, 255);
-    stroke(brightness, 200, 230); // Set stroke color to an orange hue
+    stroke(brightness, 200, 230);
     line(x1, y1, x2, y2);
   }
 
-  t += 0.001;
+  t += 0.0001;
 }
