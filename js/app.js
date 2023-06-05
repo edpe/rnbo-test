@@ -99,6 +99,7 @@ async function setupRNBO() {
   const startButton = document.createElement("button");
   startButton.setAttribute("id", "startAudio");
   startButton.textContent = "Start Audio";
+  startButton.classList.add("start-button");
   document.body.appendChild(startButton);
 
   document.body.onclick = () => {
