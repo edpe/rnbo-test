@@ -66,6 +66,12 @@ async function setupRNBO() {
     return;
   }
 
+  const startButton = document.createElement("button");
+  startButton.setAttribute("id", "startAudio");
+  startButton.textContent = "Loading Audio...";
+  startButton.classList.add("start-button");
+  document.body.appendChild(startButton);
+
   // (Optional) Load the samples
   if (dependencies.length)
     await device.loadDataBufferDependencies(dependencies);
@@ -96,11 +102,7 @@ async function setupRNBO() {
   //   makeMIDIKeyboard(device);
 
   // add a start button to the html
-  const startButton = document.createElement("button");
-  startButton.setAttribute("id", "startAudio");
   startButton.textContent = "Start Audio";
-  startButton.classList.add("start-button");
-  document.body.appendChild(startButton);
 
   document.body.onclick = () => {
     context.resume();
