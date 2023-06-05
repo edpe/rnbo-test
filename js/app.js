@@ -95,6 +95,12 @@ async function setupRNBO() {
   //   // (Optional) Connect MIDI inputs
   //   makeMIDIKeyboard(device);
 
+  // add a start button to the html
+  const startButton = document.createElement("button");
+  startButton.setAttribute("id", "startAudio");
+  startButton.textContent = "Start Audio";
+  document.body.appendChild(startButton);
+
   document.body.onclick = () => {
     context.resume();
     const startButton = document.getElementById("startAudio");
